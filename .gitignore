@@ -1,3 +1,6 @@
+# ignore all file (leaves of the dirtree) w/o extension
+# source:
+# https://codicious.wordpress.com/2018/06/06/how-would-you-exclude-all-extension-less-executable-from-your-repo/
 *
 !*.*
 !*/
