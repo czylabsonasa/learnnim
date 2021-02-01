@@ -15,7 +15,8 @@ digraph G {
     "int,float,char
     array,seq
     var,let,const
-    proc", 
+    proc
+    case-of-else", 
   shape = box ]
   n0 -> nim ;
   
