@@ -1,0 +1,1 @@
+parse.(Int,read(stdin,String)|>split)|>minimum|>println

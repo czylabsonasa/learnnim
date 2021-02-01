@@ -46,7 +46,7 @@ digraph G {
 
 /* ************ */
   math -> nim;
-  mat0[ label = "pow,^\nlog2,ln,E\nsum", 
+  mat0[ label = "pow,^\nlog2,ln,E\nsum\nbinom", 
     shape = box ] ; 
   mat0 -> math;
 
