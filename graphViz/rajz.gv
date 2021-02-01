@@ -1,0 +1,57 @@
+digraph G {
+  nim 
+    [shape = circle, URL = "https://nim-lang.org"] ;
+  
+  system, strutils, 
+  sequtils, sugar, 
+  algorithm, sets, 
+  math, strscans
+    [style = filled, color = "0.7 0.3 1.0"] ;
+
+  n0 [ label = "int,float,char\narray,seq\nvar,let,const\nproc", shape = box ]
+  n0 -> nim ;
+  
+/* ************ */
+  system -> nim [style = dotted] ;
+  sys0 [ label = "$,&,add,in,contains\nstdin, readLine, readAll", 
+          shape = box] ;
+  sys0 -> system ;
+
+/* ************ */
+  strutils -> nim;
+  str0[ label = "join,split,strip", 
+    shape = box] ;
+  str0 -> strutils ;
+
+/* ************ */
+  sequtils -> nim;
+  seq0[ label = "map", 
+    shape = box] ; 
+  seq0 -> sequtils;
+/* ************ */
+  sugar -> nim;
+  sug0[ label = "=>", 
+    shape = box ] ; 
+  sug0 -> sugar;
+/* ************ */
+  algorithm -> nim;
+  alg0[label = "sort, sorted\nnextPermutation", 
+    shape = box ]
+  alg0 -> algorithm    
+/* ************ */
+  sets -> nim;
+  set0[ label = "HashSet[T], init", 
+    shape = box ] ; 
+  set0 -> sets;
+
+/* ************ */
+  math -> nim;
+  mat0[ label = "pow,^\nlog2,ln,E\nsum", 
+    shape = box ] ; 
+  mat0 -> math;
+
+  strscans -> nim;
+  scan0[ label = "scanf", 
+    shape = box ]
+  scan0 -> strscans
+}
