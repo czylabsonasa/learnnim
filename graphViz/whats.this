@@ -1,0 +1,4 @@
+layout  -Tpdf x.gv -o x.pdf
+layout:
+circo, fdp 
+dot, neato, sfdp, twopi
