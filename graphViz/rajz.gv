@@ -1,96 +1,104 @@
-digraph G {
+digraph G { 
   nim 
     [shape = circle, URL = "https://nim-lang.org"] ;
   
   system, strutils, 
   sequtils, sugar, 
   algorithm, sets, tables, 
-  math, strscans, os, mon
+  math, strscans, os, monotimes
     [style = filled, color = "0.7 0.3 1.0"] ;
   
-  mon [label="std/monotimes"]
+  monotimes [label="std/monotimes"]
 
 
-  n0 [ label = 
+  nim0 [ label = 
     "int,float,char
     array,seq
     var,let,const
     proc
     case-of-else", 
   shape = box ]
-  n0 -> nim ;
+  nim0 -> nim ;
   
 /* ************ */
   system -> nim [style = dotted] ;
-  sys0 [ label = 
+  system0 [ label = 
     "$,&
     add,in,contains
     stdin, readLine, readAll
     typeof,sizeof", 
   shape = box] ;
-  sys0 -> system ;
+  system0 -> system ;
 
 /* ************ */
   strutils -> nim;
-  str0[ label = 
-    "join,split,strip", 
+  strutils0[ label = 
+    "join,split,strip
+    repeat", 
   shape = box] ;
-  str0 -> strutils ;
+  strutils0 -> strutils ;
 
 /* ************ */
+
   sequtils -> nim;
-  seq0[ label = 
-    "map", 
+  sequtils0[ label = 
+    "map, filter
+    repeat", 
   shape = box] ; 
-  seq0 -> sequtils;
+  sequtils0 -> sequtils;
+
 /* ************ */
   sugar -> nim;
-  sug0[ label = 
+  sugar0[ label = 
     "=>", 
   shape = box ] ; 
-  sug0 -> sugar;
+  sugar0 -> sugar;
+
 /* ************ */
+
   algorithm -> nim;
-  alg0[label = 
+  algorithm0[label = 
     "sort, sorted
     nextPermutation,
     fill", 
   shape = box ]
-  alg0 -> algorithm    
+  algorithm0 -> algorithm    
+
 /* ************ */
+
   sets -> nim;
-  set0[ label = 
+  sets0[ label = 
     "HashSet[T], init", 
   shape = box ] ; 
-  set0 -> sets;
+  sets0 -> sets;
 
 
 /* ************ */
   tables -> nim;
-  tab0[ label = 
+  tables0[ label = 
     "Table[K,V], toTable, hash", 
   shape = box ] ; 
-  tab0 -> tables;
+  tables0 -> tables;
 
 
 /* ************ */
 
   math -> nim;
-  mat0[ label = 
+  math0[ label = 
     "pow,^
     log2,ln,E
     sum
     binom", 
   shape = box ] ; 
-  mat0 -> math ;
+  math0 -> math ;
 
 /* ************ */
 
   strscans -> nim;
-  scan0[ label = 
+  strscans0[ label = 
     "scanf", 
   shape = box ]
-  scan0 -> strscans ;
+  strscans0 -> strscans ;
 
 /* ************ */
 
@@ -102,10 +110,10 @@ digraph G {
 
 /* ************ */
 
-  mon -> nim;
-  mon0[ label = 
+  monotimes -> nim;
+  monotimes0[ label = 
     "getMonoTime, ticks", 
   shape = box ]
-  mon0 -> mon ;
+  monotimes0 -> monotimes ;
 
 }
