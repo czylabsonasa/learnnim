@@ -4,7 +4,7 @@ digraph G {
   
   system, strutils, 
   sequtils, sugar, 
-  algorithm, sets, 
+  algorithm, sets, tables, 
   math, strscans, os, mon
     [style = filled, color = "0.7 0.3 1.0"] ;
   
@@ -64,7 +64,17 @@ digraph G {
   shape = box ] ; 
   set0 -> sets;
 
+
 /* ************ */
+  tables -> nim;
+  tab0[ label = 
+    "Table[K,V], toTable, hash", 
+  shape = box ] ; 
+  tab0 -> tables;
+
+
+/* ************ */
+
   math -> nim;
   mat0[ label = 
     "pow,^
@@ -74,17 +84,23 @@ digraph G {
   shape = box ] ; 
   mat0 -> math ;
 
+/* ************ */
+
   strscans -> nim;
   scan0[ label = 
     "scanf", 
   shape = box ]
   scan0 -> strscans ;
 
+/* ************ */
+
   os -> nim;
   os0[ label = 
     "sleep", 
   shape = box ]
   os0 -> os ;
+
+/* ************ */
 
   mon -> nim;
   mon0[ label = 
