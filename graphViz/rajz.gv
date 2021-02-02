@@ -104,7 +104,9 @@ digraph G {
 
   os -> nim;
   os0[ label = 
-    "sleep", 
+    "sleep,
+    createDir,dirExists,moveDir
+    walkDirs", 
   shape = box ]
   os0 -> os ;
 
