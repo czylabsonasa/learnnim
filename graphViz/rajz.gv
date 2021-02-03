@@ -34,7 +34,8 @@ digraph G {
   strutils -> nim;
   strutils0[ label = 
     "join,split,strip
-    repeat", 
+    repeat
+    find,rfind", 
   shape = box] ;
   strutils0 -> strutils ;
 
