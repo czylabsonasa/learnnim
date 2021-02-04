@@ -60,7 +60,8 @@ digraph G {
   algorithm -> nim;
   algorithm0[label = 
     "sort, sorted
-    nextPermutation,
+    binarySearch, lowerBound, upperBound
+    nextPermutation
     fill", 
   shape = box ]
   algorithm0 -> algorithm    
