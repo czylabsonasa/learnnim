@@ -1,3 +1,5 @@
+# card game for two
+
 import strutils, sequtils, sugar, algorithm
 
 let n = stdin.readLine.parseInt() 

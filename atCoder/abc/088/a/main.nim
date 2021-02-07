@@ -1,3 +1,4 @@
+# infinite coins
 import strscans
 
 var n,a: int
